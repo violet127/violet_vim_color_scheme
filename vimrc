@@ -7,6 +7,9 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+"" fix backspace issue when ssh to ubuntu machie from mac
+set backspace=start,eol,indent
+ 
 " airline is the description under window
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -43,6 +46,10 @@ set hlsearch
 
 " enable line number
 set number
+
+" python highlight
+Plugin 'vim-python/python-syntax'
+let g:python_highlight_all=1
 
 " Return to last edit position when opening files
 autocmd BufReadPost *
