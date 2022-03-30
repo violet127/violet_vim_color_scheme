@@ -1,13 +1,13 @@
 " Color scheme by Violet Wang <violet127001@gmail.com>
 " usage: 
-" (1) place violet.vim under ~/.vim/colors/ (If the directory doesn't exist, create it!)
-" (2) to preview it, use the command in vim: :colorscheme violet
-" (3) to apply it, add the folloing lines in ~/.vimrc:
+" (1) place violet.vim under ~/.vim/colors/
+" (2) in vim: :colorscheme violet
+" (3) in ~/.vimrc:
 " 	syntax on
-"	  set t_Co=256
-"	  set cursorline
-"	  set hlsearch
-"	  colorscheme violet
+"	set t_Co=256
+"	set cursorline
+"	set hlsearch
+"	colorscheme violet
 
 let colors_name = "violet"
 
@@ -31,7 +31,7 @@ let colors_name = "violet"
     hi WildMenu         cterm=BOLD      ctermfg=253     ctermbg=61
 
     hi MBENormal                        ctermfg=247     ctermbg=235
-    hi MBEChanged                       ctermfg=253     ctermbg=235
+    hi MBEChanged                       ctermfg=253     ctermbg=118
     hi MBEVisibleNormal                 ctermfg=247     ctermbg=238
     hi MBEVisibleChanged                ctermfg=253     ctermbg=238
 
@@ -54,7 +54,7 @@ let colors_name = "violet"
     hi Constant         cterm=NONE      ctermfg=215     ctermbg=NONE
     hi String           cterm=NONE      ctermfg=215     ctermbg=235
     hi Error            cterm=NONE      ctermfg=231     ctermbg=52
-    hi Identifier       cterm=NONE      ctermfg=220     ctermbg=NONE
+    hi Identifier       cterm=NONE      ctermfg=183     ctermbg=NONE
     hi Ignore           cterm=NONE
     hi Number           cterm=NONE      ctermfg=203     ctermbg=NONE
     hi PreProc          cterm=NONE      ctermfg=35      ctermbg=NONE
@@ -65,6 +65,7 @@ let colors_name = "violet"
     hi Type             cterm=NONE      ctermfg=205     ctermbg=NONE
     hi Underlined       cterm=BOLD      ctermfg=227     ctermbg=NONE
     hi TaglistTagName   cterm=BOLD      ctermfg=63      ctermbg=NONE
+    hi Function		cterm=NONE	ctermfg=220	ctermbg=NONE
     
     hi TabLineFill      cterm=NONE      ctermfg=63      ctermbg=235
     hi TabLine          cterm=NONE      ctermfg=253     ctermbg=242
@@ -79,3 +80,16 @@ let colors_name = "violet"
     hi doxygenSpecial               cterm=NONE ctermfg=63    ctermbg=NONE
     hi doxygenSpecialMultilineDesc  cterm=NONE ctermfg=117   ctermbg=NONE
     hi doxygenSpecialOnelineDesc    cterm=NONE ctermfg=117   ctermbg=NONE
+    
+    if v:version >= 700
+        hi Pmenu        cterm=NONE      ctermfg=253     ctermbg=242
+        hi PmenuSel     cterm=BOLD      ctermfg=253     ctermbg=61
+        hi PmenuSbar    cterm=BOLD      ctermfg=253     ctermbg=63
+        hi PmenuThumb   cterm=BOLD      ctermfg=253     ctermbg=63
+
+        hi SpellBad     cterm=NONE      ctermfg=226     ctermbg=196
+        hi SpellRare    cterm=NONE                      ctermbg=53
+        hi SpellLocal   cterm=NONE                      ctermbg=58
+        hi SpellCap     cterm=NONE                      ctermbg=23
+        hi MatchParen   cterm=NONE      ctermfg=NONE    ctermbg=14
+    endif
